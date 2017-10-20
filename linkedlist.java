@@ -19,7 +19,12 @@ public class LinkedList{
 		ListElement temp = head;
 		int count = 0;
 
-		while(count < index){
+		if(temp == null){
+			System.out.print("There are no elements available\n");
+			return(temp);
+		}
+
+		while(count < index && temp != null){
 			temp = temp.getNext();
 			count++;
 		}
@@ -27,26 +32,43 @@ public class LinkedList{
 		return(temp);
 	}
 
-	//public ListElement deleteElement(int index){
-
-	//}
-
-	public void printLinkedListHead(){
-		ListElement temp = head;
-
-		if(temp == null){
-			System.out.print("The list is currently empty.\n");
-		}else if(temp.getNext() == null){
-			System.out.print(temp.getData() + " ");
+	public void deleteElement(int index){
+		int count = 0;
+		//ListElement temp = new ListElement();
+		//temp = head;
+		
+		if(head == null){
+			System.out.print("There are no elements to delete.\n");
+		}else if(head.getData() == index){
+			head = head.getNext();	
+			System.out.print("Element deleted\n");
 		}else{
-			do{
-				System.out.print(temp.getData() + " ");
-				temp = temp.getNext();
-			}while(temp != null);
+
+			while(count < index){
+		//		temp = temp.getNext();
+		//		count++;
+			}
 
 		}
-
-		System.out.print("\n");
 	}
+
+
+public void printLinkedListHead(){
+	ListElement temp = head;
+
+	if(temp == null){
+		System.out.print("The list is currently empty.\n");
+	}else if(temp.getNext() == null){
+		System.out.print(temp.getData() + " ");
+	}else{
+		do{
+			System.out.print(temp.getData() + " ");
+			temp = temp.getNext();
+		}while(temp != null);
+
+	}
+
+	System.out.print("\n");
+}
 
 }
