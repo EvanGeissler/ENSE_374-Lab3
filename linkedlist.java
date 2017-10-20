@@ -32,24 +32,34 @@ public class LinkedList{
 		return(temp);
 	}
 
-	public void deleteElement(int index){
+	public ListElement deleteElement(int index){
 		int count = 0;
-		//ListElement temp = new ListElement();
-		//temp = head;
+
+		ListElement prev = null;
+		ListElement curr = head; 
 		
 		if(head == null){
 			System.out.print("There are no elements to delete.\n");
-		}else if(head.getData() == index){
-			
-			System.out.print("Element deleted\n");
-			
+			return(head);
 		}else{
-
-			while(count < index){
-		//		temp = temp.getNext();
-		//		count++;
+			if(head.getData() == index){
+				head = head.getNext();
+				return(head);
 			}
 
+			while(curr != null && curr.getData() != index){
+				prev = curr; 
+				curr = curr.getNext();
+			}
+
+			if(curr == null){
+				System.out.print("That node does not exist\n");
+				return(curr);
+			}else{
+				prev.setNext(curr.getNext());
+			}
+
+			return(prev);
 		}
 	}
 
