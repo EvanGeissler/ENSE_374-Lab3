@@ -5,11 +5,11 @@ public static void main(String[] args){
 
 
 	le.setData(5);
-	System.out.print("Data at node: " + le.getData());
+//	System.out.print("Data at node: " + le.getData());
 	
 	LinkedList list = new LinkedList();
 
 	list.addElement(le);
-
-}
+	list.printLinkedListTail();
+	}
 }

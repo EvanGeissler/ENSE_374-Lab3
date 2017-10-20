@@ -4,12 +4,10 @@ public class LinkedList{
 
 	public void addElement(ListElement le){
 		ListElement temp = head;
-		
 		if(head == null){
 			head = le;
 		}else{
-		
-			while(head.getNext() != null){
+			while(temp.getNext() != null){
 				temp = temp.getNext();
 			}
 
@@ -25,7 +23,7 @@ public class LinkedList{
 			temp = temp.getNext();
 			count++;
 		}
-		
+
 		return(temp);
 	}
 
@@ -34,8 +32,22 @@ public class LinkedList{
 	//}
 
 	public void printLinkedListTail(){
+		ListElement temp = head;
 
+		if(temp == null){
+			System.out.print("The list is currently empty.\n");
+		}else if(temp.getNext() == null){
+			System.out.print(temp.getData() + " ");
+		}else{
+			while(temp.getNext() != null){
+				System.out.print(temp.getData() + " ");
+				temp = temp.getNext();
+			};
+		}
+
+		System.out.print("\n");
 	}
+
 
 	public void printLinkedListHead(){
 
