@@ -31,7 +31,7 @@ public class LinkedList{
 
 	//}
 
-	public void printLinkedListTail(){
+	public void printLinkedListHead(){
 		ListElement temp = head;
 
 		if(temp == null){
@@ -39,17 +39,14 @@ public class LinkedList{
 		}else if(temp.getNext() == null){
 			System.out.print(temp.getData() + " ");
 		}else{
-			while(temp.getNext() != null){
+			do{
 				System.out.print(temp.getData() + " ");
 				temp = temp.getNext();
-			};
+			}while(temp != null);
+
 		}
 
 		System.out.print("\n");
 	}
 
-
-	public void printLinkedListHead(){
-
-	}
 }

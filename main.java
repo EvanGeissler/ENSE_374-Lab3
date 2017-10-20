@@ -20,14 +20,20 @@ public static void main(String[] args){
 	System.out.print(le3.getData() + " ");
 	System.out.print(le4.getData() + " ");
 
+	System.out.print("\n\n");
+
 	//Create Linked list
 	LinkedList list = new LinkedList();
 
 	//Add elements to List
-	list.addElement(le);
 	System.out.print("Adding an elements...\n");
-	//list.addElement(le);
-	list.printLinkedListTail();
+	list.addElement(le);
+	list.addElement(le2);
+	list.addElement(le3);
+	list.addElement(le4);
+
+	//Print all elements in the list
+	list.printLinkedListHead();
 
 }
 }
