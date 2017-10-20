@@ -40,8 +40,9 @@ public class LinkedList{
 		if(head == null){
 			System.out.print("There are no elements to delete.\n");
 		}else if(head.getData() == index){
-			head = head.getNext();	
+			
 			System.out.print("Element deleted\n");
+			
 		}else{
 
 			while(count < index){

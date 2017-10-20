@@ -27,11 +27,11 @@ public static void main(String[] args){
 
 	//Add elements to List
 	System.out.print("Adding an elements...\n");
-/*	list.addElement(le);
-	list.addElement(le2);
-	list.addElement(le3);
-	list.addElement(le4);
-*/
+	list.addElement(le);
+//	list.addElement(le2);
+//	list.addElement(le3);
+//	list.addElement(le4);
+
 	//Print all elements in the list
 	list.printLinkedListHead();
 	System.out.print("\n");
@@ -41,15 +41,19 @@ public static void main(String[] args){
 
 	System.out.print("Retrieve element 0\n");
 	temp = list.getElement(0);
-//	System.out.print("Element 0 data = " + temp.getData() + "\n\n");
+	System.out.print("Element 0 data = " + temp.getData() + "\n\n");
 
 	System.out.print("Retrieve element 4\n");
-	temp = list.getElement(3);
+//	temp = list.getElement(3);
 //	System.out.print("Element 3 data = " + temp.getData() + "\n\n");
 
 	//Delete elements from the list
+//	list.deleteElement(3);
+	list.printLinkedListHead();
+	
 	//Delete head
 	list.deleteElement(0);
 	list.printLinkedListHead();	
+
 }
 }
