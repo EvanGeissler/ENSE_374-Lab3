@@ -50,15 +50,15 @@ public class Main{
 		//Delete elements from the list
 		System.out.print("Deleting elements: \n");
 		
-		System.out.print("Delete element 3: \n");
+		System.out.print("Delete element data 3: \n");
 		list.deleteElement(3);
 		list.printLinkedListHead();
 
 		System.out.print("\n");
 
 		//Delete head
-		System.out.print("Delete element 0: \n");
-		list.deleteElement(0);
+		System.out.print("Delete element with data 0: \n");
+		list.deleteElement(5);
 		list.printLinkedListHead();	
 
 		System.out.print("\n");
