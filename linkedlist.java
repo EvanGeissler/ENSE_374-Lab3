@@ -4,12 +4,17 @@ public class LinkedList{
 
 	public void addElement(ListElement le){
 		ListElement temp = head;
+		
+		if(head == null){
+			head = le;
+		}else{
+		
+			while(head.getNext() != null){
+				temp = temp.getNext();
+			}
 
-		while(head.next != null){
-			temp = temp.next;
+			temp.setNext(le);
 		}
-
-		temp.next = new ListElelment(le);
 	}
 
 	public ListElement getElement(int index){
@@ -17,16 +22,16 @@ public class LinkedList{
 		int count = 0;
 
 		while(count < index){
-			temp = temp.next;
+			temp = temp.getNext();
 			count++;
 		}
 		
 		return(temp);
 	}
 
-	public ListElement deleteElement(int index){
+	//public ListElement deleteElement(int index){
 
-	}
+	//}
 
 	public void printLinkedListTail(){
 

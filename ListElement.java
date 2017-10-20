@@ -15,4 +15,14 @@ public class ListElement{
 	public int getData(){
 		return this.data;
 	}
+
+	public void setNext(ListElement next){
+		this.next = next;
+	}
+
+	public ListElement getNext(){
+		return this.next;
+	}
 }
+
+
