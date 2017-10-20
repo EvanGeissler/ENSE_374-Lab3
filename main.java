@@ -34,6 +34,18 @@ public static void main(String[] args){
 
 	//Print all elements in the list
 	list.printLinkedListHead();
+	System.out.print("\n");
+
+	//Retrieve a specific element 
+	ListElement temp = new ListElement();
+
+	System.out.print("Retrieve element 0\n");
+	temp = list.getElement(0);
+	System.out.print("Element 0 data = " + temp.getData() + "\n\n");
+
+	System.out.print("Retrieve element 4\n");
+	temp = list.getElement(3);
+	System.out.print("Element 3 data = " + temp.getData() + "\n\n");
 
 }
 }
