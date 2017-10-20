@@ -9,11 +9,19 @@ public class LinkedList{
 			temp = temp.next;
 		}
 
-		head.next = new ListElelment(le);
+		temp.next = new ListElelment(le);
 	}
 
 	public ListElement getElement(int index){
+		ListElement temp = head;
+		int count = 0;
+
+		while(count < index){
+			temp = temp.next;
+			count++;
+		}
 		
+		return(temp);
 	}
 
 	public ListElement deleteElement(int index){
